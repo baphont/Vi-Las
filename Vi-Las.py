@@ -75,6 +75,7 @@ class MainWindow(QMainWindow):
         self.list_widget.setSelectionMode(QListWidget.SelectionMode.MultiSelection)
         content_layout.addWidget(self.list_widget, 7)
         self.preview_label = QLabel("拖曳影片檔案至此以開始"); self.preview_label.setAlignment(Qt.AlignmentFlag.AlignCenter); self.preview_label.setMinimumWidth(500); self.preview_label.setStyleSheet("border-left: 1px solid #333;"); content_layout.addWidget(self.preview_label, 3)
+        self.preview_label = QLabel("拖曳影片檔案至此以開始(全域皆可)\n輸出圖檔會以幀數自動命名\n若有問題可從右上連結詢問"); self.preview_label.setAlignment(Qt.AlignmentFlag.AlignCenter); self.preview_label.setMinimumWidth(500); self.preview_label.setStyleSheet("border-left: 1px solid #333;"); content_layout.addWidget(self.preview_label, 3)
         control_layout = QHBoxLayout(control_panel); control_layout.setContentsMargins(10,0,10,0)
         self.status_label = QLabel("準備就緒"); control_layout.addWidget(self.status_label)
         self.selection_label = QLabel("已選取 0 張"); control_layout.addWidget(self.selection_label)
